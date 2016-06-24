@@ -5,12 +5,39 @@ class Person
   end
 end
 
-class List_logic
-  def user_name
-    
+
+
+class List
+
+  def initialize(items_listed, entry)
+    @listed_items = items_listed
   end
 
-  def items_listed
+  def users_entry(entry)
+    print "Would you like to add something: "
+    gets.chomp
+  end
+
+  def users_items_listed(name, list)
+    slots = 0
+    items_listed = []
+    items_listed << users_entry
+    loop do
+      puts "Slots #{slots}"
+
+      slots += 1
+      break
+    end
+  end
+
+  def print_items_listed(items_listed, list)
+    print "#{items_listed}"
+  end
+
+  def complete_items_checklist
+  end
+
+  def incomplete_items_checklist
   end
 end
 
@@ -33,3 +60,7 @@ end
 
 todo = Todo.new
 todo.start
+list = List.new
+
+
+entry = gets.chomp
